@@ -1,0 +1,26 @@
+- [x] Update `client/src/data/company/infosys.js` with structured data for updated PYQs, Technical categories, and HR Interview Coach questions.
+- [x] Upgrade `client/src/components/CompanyPrep/PYQTimeline.jsx` with full description fields, bookmarks, Solve on LeetCode/View Solution buttons, and frequently asked badges.
+- [x] Redesign `client/src/components/CompanyPrep/TechnicalInterview.jsx` with page-like category panel, checklist lists, difficulty meter, confidence rating, and the Mock Interview Mode session.
+- [x] Redesign `client/src/components/CompanyPrep/HrInterview.jsx` with HR Coach details and the Rapid Fire Mode timer session.
+- [x] Redesign `client/src/components/CompanyPrep/QuestionChecklist.jsx` to render a premium LeetCode/NeetCode-style questions table.
+- [x] Revert height stretch settings in `CompanyTemplate.jsx`, `PYQTimeline.jsx`, `TechnicalInterview.jsx`, and `HrInterview.jsx` to ensure content-driven flow.
+- [x] Redesign `PYQTimeline.jsx` into a Modern Placement Portal UI feed (compact layout, filter pills, search, badges, hover translations, inline actions, alternate row colors).
+- [x] Refine PYQTimeline by removing the search input, counts, and filter pills completely.
+- [x] Restore the three side-by-side header buttons inside `TechnicalInterview.jsx` (Core Subjects, Interview Questions, and Start Mock Interview).
+- [x] Set routing for Core Subjects button to navigate to `/prepare/core-subjects` and Interview Questions to `/prepare/interview` using `navigate()` hooks instead of local scrolling.
+- [x] Add `Interview Questions` navigation button inside `HrInterview.jsx`'s header next to Rapid Fire Mode, pointing to `/prepare/interview` via React Router.
+- [x] Replace the Preparation Resources section in `ResourcesCard.jsx` with a Placement Mock Test Center featuring 5 locked cards styled in a responsive 2-column layout.
+- [x] Append a 6th mock test card ("Final Simulation 2") next to "Final Simulation 1" inside `ResourcesCard.jsx` to complete the 2-column alignment.
+- [x] Create the `client/src/data/aptitude.js` database containing questions, topics, PYQs, formulas, shortcuts, company cards, and locked mock tests.
+- [x] Create the main dashboard component `client/src/pages/AptitudePrep.jsx` implementing the Hero, 60 Checklist questions list, 20 topics grid, PYQs list, formula & shortcut accordions, company wise prep cards, and locked mock tests.
+- [x] Map `/prepare/aptitude` in `client/src/App.jsx` to render the newly created `AptitudePrep` page.
+- [x] Redesign `client/src/pages/AptitudePrep.jsx` into a navigation hub with hero header, 6 clickable main cards (Quant, Logical, Verbal, Non-Verbal, DI, Pseudo Code).
+- [x] Implement nested syllabus expandable breakdown panels inside `client/src/pages/AptitudePrep.jsx` with topic tags matching the DSA dark styling.
+- [x] Add 5 Overall Aptitude Mock Assessments at the footer of the page, with Mock Test 1 unlocked and others staged/locked.
+- [x] Add category-specific mock tests (Quantitative, Logical, Verbal, Non-Verbal, DI, Pseudo Code) inside their expanded category views, with only the first mock in each unlocked.
+- [x] Update the layout of `AptitudePrep.jsx` to hide the left syllabus/company sidebar using `hideLeftSidebar={true}` on the CompanyLayout shell.
+- [x] Create `client/src/data/coreSubjects.js` detailing syllabus categories, Q&As, PYQs, revision notes, and 4 mock tests for DBMS, OS, CN, OOPs, and SQL.
+- [x] Create `client/src/pages/CoreSubjectsPrep.jsx` rendering the Hero and 6 clickable subject cards (DBMS, OS, CN, OOPs, SQL, and System Design).
+- [x] Create `client/src/pages/CoreSubjectDetail.jsx` containing overview, topic categories, Q&A accordion, PYQ feed, revision notes, and 4 mock tests.
+- [x] Map `/prepare/core`, `/prepare/core-subjects` and `/prepare/core-subjects/:subjectId` routes inside `App.jsx`.
+- [x] Verify everything compiles successfully and passes build checks.

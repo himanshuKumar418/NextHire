@@ -1,0 +1,163 @@
+const aptitudeData = {
+  questions: [
+    { id: 'apt_1', name: 'Find the average of first 50 natural numbers.', difficulty: 'Easy', topic: 'Average', solutionUrl: '#' },
+    { id: 'apt_2', name: 'A train crosses a pole in 15 seconds. If speed is 60 km/h, find length.', difficulty: 'Easy', topic: 'Time Speed Distance', solutionUrl: '#' },
+    { id: 'apt_3', name: 'Find the cost price if selling price is Rs. 240 at 20% profit.', difficulty: 'Easy', topic: 'Profit & Loss', solutionUrl: '#' },
+    { id: 'apt_4', name: 'A and B can complete a work in 10 and 15 days. Together they take?', difficulty: 'Easy', topic: 'Time & Work', solutionUrl: '#' },
+    { id: 'apt_5', name: 'Express 45% as a fraction in simplest form.', difficulty: 'Easy', topic: 'Percentage', solutionUrl: '#' },
+    { id: 'apt_6', name: 'Find compound interest on Rs. 10000 for 2 years at 10% per annum.', difficulty: 'Easy', topic: 'Simple & Compound Interest', solutionUrl: '#' },
+    { id: 'apt_7', name: 'A sum of money doubles itself in 8 years at simple interest. Rate is?', difficulty: 'Easy', topic: 'Simple & Compound Interest', solutionUrl: '#' },
+    { id: 'apt_8', name: 'Two numbers are in ratio 3:4. If HCF is 4, find their LCM.', difficulty: 'Easy', topic: 'Number System', solutionUrl: '#' },
+    { id: 'apt_9', name: 'A boat goes 12 km/h in still water. If stream is 2 km/h, upstream speed is?', difficulty: 'Easy', topic: 'Time Speed Distance', solutionUrl: '#' },
+    { id: 'apt_10', name: 'Average of 5 consecutive odd numbers is 25. Find the largest.', difficulty: 'Easy', topic: 'Average', solutionUrl: '#' },
+    { id: 'apt_11', name: 'What is 35% of 80 plus 50% of 120?', difficulty: 'Easy', topic: 'Percentage', solutionUrl: '#' },
+    { id: 'apt_12', name: 'Find the probability of getting an even sum when rolling two dice.', difficulty: 'Easy', topic: 'Probability', solutionUrl: '#' },
+    { id: 'apt_13', name: 'Ratio of ages of A and B is 4:5. After 5 years it becomes 5:6. A\'s age is?', difficulty: 'Easy', topic: 'Ages', solutionUrl: '#' },
+    { id: 'apt_14', name: 'A vendor buys lemons at 6 for Rs. 10 and sells at 4 for Rs. 10. Gain %?', difficulty: 'Medium', topic: 'Profit & Loss', solutionUrl: '#' },
+    { id: 'apt_15', name: 'A pipe can fill a tank in 8 hours, leakage empties in 12. Combined time?', difficulty: 'Medium', topic: 'Time & Work', solutionUrl: '#' },
+    { id: 'apt_16', name: 'Find number of arrangements of the letters of word LEADING.', difficulty: 'Medium', topic: 'Permutation & Combination', solutionUrl: '#' },
+    { id: 'apt_17', name: 'A container has 40L milk. 4L replaced with water. Process repeated twice. Milk now?', difficulty: 'Medium', topic: 'Mixture & Allegation', solutionUrl: '#' },
+    { id: 'apt_18', name: 'In what ratio must rice at Rs. 60/kg be mixed with Rs. 65/kg to get Rs. 62/kg?', difficulty: 'Medium', topic: 'Mixture & Allegation', solutionUrl: '#' },
+    { id: 'apt_19', name: 'A, B, C start a business with 20k, 30k, 40k. Profit share of B from 90k is?', difficulty: 'Medium', topic: 'Partnership', solutionUrl: '#' },
+    { id: 'apt_20', name: 'Two trains of length 120m and 80m run at 40 km/h and 50 km/h opposite. Time to cross?', difficulty: 'Medium', topic: 'Time Speed Distance', solutionUrl: '#' },
+    { id: 'apt_21', name: 'Find the units digit of 2^23 plus 3^24.', difficulty: 'Medium', topic: 'Number System', solutionUrl: '#' },
+    { id: 'apt_22', name: 'Find the sum of all two-digit numbers divisible by 5.', difficulty: 'Medium', topic: 'Number System', solutionUrl: '#' },
+    { id: 'apt_23', name: 'A bag contains 5 red and 4 blue balls. 3 balls drawn. Probability of 2 red?', difficulty: 'Medium', topic: 'Probability', solutionUrl: '#' },
+    { id: 'apt_24', name: 'A sphere of radius 6cm is melted to form a wire of radius 0.2cm. Length is?', difficulty: 'Medium', topic: 'Geometry', solutionUrl: '#' },
+    { id: 'apt_25', name: 'If log 2 = 0.3010, find log 50.', difficulty: 'Medium', topic: 'Algebra', solutionUrl: '#' },
+    { id: 'apt_26', name: 'Solve for x: x^2 - 5x + 6 = 0.', difficulty: 'Medium', topic: 'Algebra', solutionUrl: '#' },
+    { id: 'apt_27', name: 'If A is 25% richer than B, by what % is B poorer than A?', difficulty: 'Medium', topic: 'Percentage', solutionUrl: '#' },
+    { id: 'apt_28', name: 'A dealer marks goods 30% above cost and allows 10% discount. Profit %?', difficulty: 'Medium', topic: 'Profit & Loss', solutionUrl: '#' },
+    { id: 'apt_29', name: 'In a group of 80 people, 40 like tea, 50 like coffee. How many like both?', difficulty: 'Medium', topic: 'Logical Reasoning', solutionUrl: '#' },
+    { id: 'apt_30', name: 'Look at the series: 2, 6, 18, 54, ... What number comes next?', difficulty: 'Medium', topic: 'Logical Reasoning', solutionUrl: '#' },
+    { id: 'apt_31', name: 'Fill in the blank: "He is senior ___ me in terms of experience."', difficulty: 'Medium', topic: 'Verbal Ability', solutionUrl: '#' },
+    { id: 'apt_32', name: 'Identify antonym of the word "ABUNDANT".', difficulty: 'Medium', topic: 'Verbal Ability', solutionUrl: '#' },
+    { id: 'apt_33', name: 'Data Interpretation: Study table of sales and find average quarterly sale.', difficulty: 'Medium', topic: 'Data Interpretation', solutionUrl: '#' },
+    { id: 'apt_34', name: 'Is X an integer? Statement 1: X/2 is integer. Statement 2: X/3 is integer.', difficulty: 'Medium', topic: 'Data Sufficiency', solutionUrl: '#' },
+    { id: 'apt_35', name: 'A person travels 10km North, then 6km South, then 3km East. Distance from start?', difficulty: 'Medium', topic: 'Logical Reasoning', solutionUrl: '#' },
+    { id: 'apt_36', name: 'Arrange in alphabetical order: Zenith, Zephyr, Zealot, Zero.', difficulty: 'Medium', topic: 'Verbal Ability', solutionUrl: '#' },
+    { id: 'apt_37', name: 'The sum of ages of 5 children born at intervals of 3 years is 50. Youngest child age?', difficulty: 'Medium', topic: 'Ages', solutionUrl: '#' },
+    { id: 'apt_38', name: 'A tank is filled in 5 hours by three pipes A, B, C. C is twice fast as B...', difficulty: 'Medium', topic: 'Time & Work', solutionUrl: '#' },
+    { id: 'apt_39', name: 'How many times do the hands of a clock overlap in 24 hours?', difficulty: 'Medium', topic: 'Logical Reasoning', solutionUrl: '#' },
+    { id: 'apt_40', name: 'If code for CAT is 24, code for DOG is?', difficulty: 'Medium', topic: 'Logical Reasoning', solutionUrl: '#' },
+    { id: 'apt_41', name: 'Find the area of a circle whose circumference is 44 cm.', difficulty: 'Easy', topic: 'Geometry', solutionUrl: '#' },
+    { id: 'apt_42', name: 'An article marked Rs. 800 is sold for Rs. 720. Find discount percent.', difficulty: 'Easy', topic: 'Profit & Loss', solutionUrl: '#' },
+    { id: 'apt_43', name: 'In a class, 60% students passed in Math, 50% in English. Find fail %...', difficulty: 'Medium', topic: 'Percentage', solutionUrl: '#' },
+    { id: 'apt_44', name: 'A and B run a race of 1km. A beats B by 50m or 10 seconds. Find A\'s speed.', difficulty: 'Medium', topic: 'Time Speed Distance', solutionUrl: '#' },
+    { id: 'apt_45', name: 'If 3 coins are tossed simultaneously, find probability of at least 2 heads.', difficulty: 'Easy', topic: 'Probability', solutionUrl: '#' },
+    { id: 'apt_46', name: 'Find the HCF of 2/3, 8/9 and 16/81.', difficulty: 'Medium', topic: 'Number System', solutionUrl: '#' },
+    { id: 'apt_47', name: 'A sum amounts to Rs. 3600 in 2 years and Rs. 4800 in 4 years at simple interest. Find sum.', difficulty: 'Medium', topic: 'Simple & Compound Interest', solutionUrl: '#' },
+    { id: 'apt_48', name: 'A train 150m long passes a bridge 250m long in 20 seconds. Find speed.', difficulty: 'Easy', topic: 'Time Speed Distance', solutionUrl: '#' },
+    { id: 'apt_49', name: 'A sum of money compounded annually doubles in 5 years. It becomes 8 times in?', difficulty: 'Medium', topic: 'Simple & Compound Interest', solutionUrl: '#' },
+    { id: 'apt_50', name: 'If 12 men or 18 women can do a work in 14 days, 8 men and 16 women together do in?', difficulty: 'Medium', topic: 'Time & Work', solutionUrl: '#' },
+    { id: 'apt_51', name: 'If x + y = 10 and xy = 21, find x^2 + y^2.', difficulty: 'Easy', topic: 'Algebra', solutionUrl: '#' },
+    { id: 'apt_52', name: 'Find area of triangle with sides 13cm, 14cm, 15cm.', difficulty: 'Medium', topic: 'Geometry', solutionUrl: '#' },
+    { id: 'apt_53', name: 'A card is drawn from a pack of 52. Probability of getting a King or Heart?', difficulty: 'Medium', topic: 'Probability', solutionUrl: '#' },
+    { id: 'apt_54', name: 'A, B and C invest in a business. Ratio of investment is 2:3:4. Time ratio is 4:3:2. Profit ratio?', difficulty: 'Medium', topic: 'Partnership', solutionUrl: '#' },
+    { id: 'apt_55', name: 'Find unit digit of 7^105.', difficulty: 'Easy', topic: 'Number System', solutionUrl: '#' },
+    { id: 'apt_56', name: 'The ratio of income of A and B is 5:4. Ratio of expense is 3:2. If each saves Rs. 800, find B\'s income.', difficulty: 'Medium', topic: 'Ratio & Proportion', solutionUrl: '#' },
+    { id: 'apt_57', name: 'What day of the week was 15th August 1947?', difficulty: 'Medium', topic: 'Logical Reasoning', solutionUrl: '#' },
+    { id: 'apt_58', name: 'Choose word spelling error: Recieve, Believe, Achieve, Relieve.', difficulty: 'Easy', topic: 'Verbal Ability', solutionUrl: '#' },
+    { id: 'apt_59', name: 'Find the missing pattern term: SCD, TEF, UGH, ____, WKL.', difficulty: 'Easy', topic: 'Logical Reasoning', solutionUrl: '#' },
+    { id: 'apt_60', name: 'Average age of class of 30 is 15. If teacher age included, average becomes 16. Teacher age is?', difficulty: 'Easy', topic: 'Average', solutionUrl: '#' }
+  ],
+
+  topics: [
+    { name: 'Arithmetic', count: '10 Subtopics', questions: 250, progress: 35 },
+    { name: 'Number System', count: '6 Subtopics', questions: 120, progress: 50 },
+    { name: 'Percentage', count: '4 Subtopics', questions: 80, progress: 65 },
+    { name: 'Profit & Loss', count: '5 Subtopics', questions: 90, progress: 40 },
+    { name: 'Ratio & Proportion', count: '4 Subtopics', questions: 70, progress: 80 },
+    { name: 'Average', count: '3 Subtopics', questions: 60, progress: 90 },
+    { name: 'Time & Work', count: '5 Subtopics', questions: 95, progress: 30 },
+    { name: 'Time Speed Distance', count: '6 Subtopics', questions: 110, progress: 25 },
+    { name: 'Simple & Compound Interest', count: '4 Subtopics', questions: 80, progress: 15 },
+    { name: 'Partnership', count: '2 Subtopics', questions: 40, progress: 70 },
+    { name: 'Ages', count: '2 Subtopics', questions: 45, progress: 85 },
+    { name: 'Mixture & Allegation', count: '3 Subtopics', questions: 55, progress: 45 },
+    { name: 'Permutation & Combination', count: '4 Subtopics', questions: 70, progress: 20 },
+    { name: 'Probability', count: '4 Subtopics', questions: 75, progress: 10 },
+    { name: 'Data Interpretation', count: '5 Subtopics', questions: 100, progress: 55 },
+    { name: 'Data Sufficiency', count: '3 Subtopics', questions: 60, progress: 30 },
+    { name: 'Algebra', count: '5 Subtopics', questions: 90, progress: 5 },
+    { name: 'Geometry', count: '6 Subtopics', questions: 110, progress: 0 },
+    { name: 'Logical Reasoning', count: '15 Subtopics', questions: 350, progress: 40 },
+    { name: 'Verbal Ability', count: '12 Subtopics', questions: 280, progress: 50 }
+  ],
+
+  pyqs: [
+    { name: 'Find HCF of 2.1, 0.35 and 4.9.', company: 'TCS', year: '2025', round: 'OA', role: 'Ninja', diff: 'Easy', topic: 'Number System', desc: 'Find highest common factor for decimal values.', frequentlyAsked: true },
+    { name: 'Arrangements of word SUCCESS.', company: 'Infosys', year: '2024', round: 'OA', role: 'SE', diff: 'Medium', topic: 'Permutation & Combination', desc: 'Find total permutations of SUCCESS including duplicate letters.', frequentlyAsked: true },
+    { name: 'A sum compounded annually triples in 3 years. When 9 times?', company: 'Accenture', year: '2025', round: 'OA', role: 'Associate', diff: 'Medium', topic: 'Simple & Compound Interest', desc: 'Compound interest calculation for multiplication intervals.', frequentlyAsked: false },
+    { name: 'Ratio of savings to income is 2:7. If income increases...', company: 'Capgemini', year: '2024', round: 'Interview', role: 'Analyst', diff: 'Medium', topic: 'Ratio & Proportion', desc: 'Evaluate change in savings based on percentage increments.', frequentlyAsked: false },
+    { name: 'Time to cross bridge of 300m at speed of 72 km/h.', company: 'Cognizant', year: '2025', round: 'OA', role: 'GenC', diff: 'Easy', topic: 'Time Speed Distance', desc: 'Determine total time taken for a train to pass a platform bridge.', frequentlyAsked: true },
+    { name: 'Probability of drawing 2 black cards sequentially.', company: 'TCS', year: '2024', round: 'OA', role: 'Ninja', diff: 'Easy', topic: 'Probability', desc: 'Sequential card draw without replacement probability calculations.', frequentlyAsked: false },
+    { name: 'Ratio of ages of A and B is 3:4. 10 years ago was 1:2.', company: 'Infosys', year: '2023', round: 'Interview', role: 'SE', diff: 'Easy', topic: 'Ages', desc: 'Compute present age of A using ratio constraints.', frequentlyAsked: false },
+    { name: 'Data Interpretation: Sales revenue increase percentage.', company: 'Cognizant', year: '2025', round: 'OA', role: 'GenC Pro', diff: 'Medium', topic: 'Data Interpretation', desc: 'Find percentage increase between consecutive fiscal quarters.', frequentlyAsked: true }
+  ],
+
+  formulas: [
+    { title: 'Arithmetic Progression (AP)', answer: 'n-th term: Tn = a + (n-1)d. Sum of n terms: Sn = (n/2)[2a + (n-1)d] or Sn = (n/2)[a + L] where L is last term.' },
+    { title: 'Geometric Progression (GP)', answer: 'n-th term: Tn = a * r^(n-1). Sum of n terms: Sn = a(r^n - 1)/(r - 1) if r > 1, or a(1 - r^n)/(1 - r) if r < 1.' },
+    { title: 'Percentage Formula', answer: 'Percentage Increase = (New Value - Old Value) / Old Value * 100. Product constant: If A is x% more than B, B is [x / (100 + x)] * 100 % less than A.' },
+    { title: 'Profit & Loss Formula', answer: 'Profit = SP - CP. Loss = CP - SP. Profit % = (Profit/CP)*100. Marked Price Discount: SP = MP * (100 - Discount%)/100.' },
+    { title: 'Simple & Compound Interest', answer: 'Simple Interest SI = (P*R*T)/100. Amount under Compound Interest: A = P * (1 + R/100)^N. CI = A - P.' },
+    { title: 'Time Speed Distance Relations', answer: 'Distance = Speed * Time. Average Speed = 2xy / (x+y) when covering same distance at speeds x and y. Relative Speed: x - y (same dir), x + y (opposite dir).' }
+  ],
+
+  shortcuts: [
+    { title: 'Multiplying by 11 Shortcut', answer: 'Add neighbors: To multiply 24 by 11, write 2 on left, 4 on right, and (2+4) = 6 in middle to get 264.' },
+    { title: 'Square of numbers ending in 5', answer: 'Multiply first digit by its consecutive integer, then append 25. For example, 35^2: 3*4=12, append 25 to get 1225.' },
+    { title: 'Time & Work Shortcut (A & B Together)', answer: 'If A does work in X days and B in Y days, together they take (X * Y) / (X + Y) days.' },
+    { title: 'Mixture & Allegation Cross Rule', answer: 'Ratio of Cheaper to Dearer = (Dearer Price - Mean Price) / (Mean Price - Cheaper Price).' }
+  ],
+
+  companies: [
+    { id: 'infosys', name: 'Infosys Aptitude Prep', difficulty: 4, questionsCount: 120, logo: '🇮🇳' },
+    { id: 'tcs', name: 'TCS iON NQT Aptitude', difficulty: 3, questionsCount: 150, logo: '🇮🇳' },
+    { id: 'accenture', name: 'Accenture Cognitive Prep', difficulty: 3, questionsCount: 100, logo: '🇮🇳' },
+    { id: 'capgemini', name: 'Capgemini Game-Based Aptitude', difficulty: 4, questionsCount: 90, logo: '🇮🇳' },
+    { id: 'cognizant', name: 'Cognizant AMCAT Prep', difficulty: 3, questionsCount: 110, logo: '🇮🇳' }
+  ],
+
+  mockTests: [
+    {
+      id: 1,
+      title: 'Aptitude Mock 1',
+      subtitle: 'Beginner Assessment',
+      duration: '45 Minutes',
+      questions: '30 Qs',
+      includes: ['✓ Quant Basics', '✓ Speed Math', '✓ Number Series'],
+      difficulty: 'Easy',
+      reward: '80 XP',
+      unlock: 'Unlock: Complete Profile',
+      buttonText: '🔒 Complete Profile to Unlock'
+    },
+    {
+      id: 2,
+      title: 'Aptitude Mock 2',
+      subtitle: 'Placement Simulation',
+      duration: '60 Minutes',
+      questions: '45 Qs',
+      includes: ['• Profit & Loss', '• Time & Work', '• Simple Interest'],
+      difficulty: 'Medium',
+      reward: '150 XP',
+      unlock: 'Unlock Requirement: Complete Mock 1',
+      buttonText: '🔒 Locked'
+    },
+    {
+      id: 3,
+      title: 'Aptitude Mock 3',
+      subtitle: 'Advanced Speed Challenge',
+      duration: '60 Minutes',
+      questions: '50 Qs',
+      includes: ['• Probability', '• Combinatorics', '• Data Interpretation'],
+      difficulty: 'Hard',
+      reward: '300 XP',
+      unlock: 'Unlock Requirement: Complete Mock 2',
+      buttonText: '🔒 Locked'
+    }
+  ]
+};
+
+export default aptitudeData;

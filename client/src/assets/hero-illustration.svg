@@ -1,0 +1,78 @@
+<svg width="500" height="400" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Code Window Container -->
+  <rect x="20" y="40" width="460" height="320" rx="12" fill="#1e293b" stroke="#334155" strokeWidth="2" />
+  
+  <!-- Window Header -->
+  <path d="M20 52C20 45.3726 25.3726 40 32 40H468C474.627 40 480 45.3726 480 52V76H20V52Z" fill="#0f172a" />
+  
+  <!-- Window Control Dots -->
+  <circle cx="45" cy="58" r="6" fill="#ef4444" />
+  <circle cx="65" cy="58" r="6" fill="#f59e0b" />
+  <circle cx="85" cy="58" r="6" fill="#10b981" />
+  
+  <!-- Title / Tab in Header -->
+  <rect x="120" y="48" width="100" height="20" rx="4" fill="#1e293b" />
+  <text x="170" y="62" fill="#94a3b8" fontSize="11" fontFamily="monospace" textAnchor="middle">bst_search.py</text>
+
+  <!-- Code Line Visuals (Simulated editor lines) -->
+  <!-- Line 1: class Node: -->
+  <rect x="40" y="100" width="90" height="8" rx="4" fill="#f43f5e" />
+  
+  <!-- Line 2:     def __init__(self, key): -->
+  <rect x="65" y="120" width="160" height="8" rx="4" fill="#a855f7" />
+  
+  <!-- Line 3:         self.left = None -->
+  <rect x="90" y="140" width="130" height="8" rx="4" fill="#38bdf8" />
+  
+  <!-- Line 4:         self.right = None -->
+  <rect x="90" y="160" width="140" height="8" rx="4" fill="#38bdf8" />
+  
+  <!-- Line 5:         self.val = key -->
+  <rect x="90" y="180" width="120" height="8" rx="4" fill="#38bdf8" />
+
+  <!-- Line 6:     def insert(root, key): -->
+  <rect x="65" y="210" width="150" height="8" rx="4" fill="#a855f7" />
+  
+  <!-- Line 7:         if root is None: -->
+  <rect x="90" y="230" width="120" height="8" rx="4" fill="#f43f5e" />
+  
+  <!-- Line 8:             return Node(key) -->
+  <rect x="115" y="250" width="130" height="8" rx="4" fill="#10b981" />
+
+  <!-- Graph / Tree Data Structure Visual Representation on the Right -->
+  <!-- Outer panel for visualization -->
+  <rect x="270" y="90" width="190" height="250" rx="8" fill="#0f172a" stroke="#334155" strokeWidth="1.5" />
+  <text x="365" y="115" fill="#64748b" fontSize="12" fontFamily="sans-serif" fontWeight="bold" textAnchor="middle">BST SEARCH</text>
+  
+  <!-- Connection Lines (Edges) -->
+  <line x1="365" y1="150" x2="325" y2="200" stroke="#475569" strokeWidth="2" />
+  <line x1="365" y1="150" x2="405" y2="200" stroke="#475569" strokeWidth="2" />
+  <line x1="325" y1="210" x2="305" y2="260" stroke="#475569" strokeWidth="2" />
+  <line x1="325" y1="210" x2="345" y2="260" stroke="#475569" strokeWidth="2" />
+  
+  <!-- Tree Nodes (Circles & Labels) -->
+  <!-- Root Node (50) -->
+  <circle cx="365" cy="150" r="16" fill="#1e293b" stroke="#38bdf8" strokeWidth="2" />
+  <text x="365" y="154" fill="#38bdf8" fontSize="11" fontFamily="monospace" fontWeight="bold" textAnchor="middle">50</text>
+  
+  <!-- Left Child (30) -->
+  <circle cx="325" cy="210" r="16" fill="#1e293b" stroke="#38bdf8" strokeWidth="2" />
+  <text x="325" y="214" fill="#38bdf8" fontSize="11" fontFamily="monospace" fontWeight="bold" textAnchor="middle">30</text>
+  
+  <!-- Right Child (70) -->
+  <circle cx="405" cy="210" r="16" fill="#1e293b" stroke="#38bdf8" strokeWidth="2" />
+  <text x="405" y="214" fill="#38bdf8" fontSize="11" fontFamily="monospace" fontWeight="bold" textAnchor="middle">70</text>
+  
+  <!-- Left-Left Child (20) -->
+  <circle cx="305" cy="270" r="16" fill="#1e293b" stroke="#38bdf8" strokeWidth="2" />
+  <text x="305" y="274" fill="#38bdf8" fontSize="11" fontFamily="monospace" fontWeight="bold" textAnchor="middle">20</text>
+  
+  <!-- Left-Right Child (40) -->
+  <circle cx="345" cy="270" r="16" fill="#1e293b" stroke="#38bdf8" strokeWidth="2" />
+  <text x="345" y="274" fill="#38bdf8" fontSize="11" fontFamily="monospace" fontWeight="bold" textAnchor="middle">40</text>
+  
+  <!-- Successful Search Highlight Indicator -->
+  <circle cx="345" cy="270" r="22" fill="none" stroke="#10b981" strokeWidth="2" strokeDasharray="4,4" />
+  <rect x="375" y="295" width="70" height="20" rx="4" fill="#10b981" />
+  <text x="410" y="309" fill="#0f172a" fontSize="10" fontFamily="sans-serif" fontWeight="bold" textAnchor="middle">Found: 40</text>
+</svg>
