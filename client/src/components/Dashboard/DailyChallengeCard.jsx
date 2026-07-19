@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { FiAward, FiLayers } from 'react-icons/fi';
+import { FiAward } from 'react-icons/fi';
 
 const DailyChallengeCard = ({ data, isSolved, onMarkSolved, targetCompany }) => {
   if (!data) return null;

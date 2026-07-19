@@ -1,29 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FiBriefcase, FiZap, FiAward, FiClock, FiGrid, FiArrowRight, FiLock } from 'react-icons/fi';
-import { getLocalItem } from '../../utils/localStorageHelper.js';
+import { FiLock } from 'react-icons/fi';
 import { getCompanyProgress } from '../../data/company/companyRegistry.js';
 
 const CompanyLayout = ({ children, hideLeftSidebar = false }) => {
   const location = useLocation();
 
-  const streak = 8;
-  const [totalXp, setTotalXp] = useState(() => {
-    return getLocalItem('user_xp', '240');
-  });
-  const studyHours = '12.5';
-
-  useEffect(() => {
-    const handleSync = () => {
-      setTotalXp(getLocalItem('user_xp', '240'));
-    };
-    window.addEventListener('company-xp-changed', handleSync);
-    window.addEventListener('xp-changed', handleSync);
-    return () => {
-      window.removeEventListener('company-xp-changed', handleSync);
-      window.removeEventListener('xp-changed', handleSync);
-    };
-  }, []);
 
   const companiesList = [
     { id: 'infosys', name: 'Infosys', logo: '🇮🇳', active: true, pkg: '6.25 - 21.0 LPA' },
@@ -95,46 +77,6 @@ const CompanyLayout = ({ children, hideLeftSidebar = false }) => {
           {children}
         </div>
 
-        {/* 3. Right Sidebar HUD */}
-        <aside className="hidden xl:block w-64 bg-slate-900 border border-slate-800 p-4 rounded-xl sticky top-24 shrink-0 space-y-4">
-          <div className="border-b border-slate-800/60 pb-2">
-            <span className="text-[9px] font-black text-sky-400 uppercase tracking-widest block">Dashboard HUD</span>
-            <h3 className="text-xs font-bold text-slate-200">Prep Progress</h3>
-          </div>
-
-          <div className="space-y-3.5 text-xs">
-            <div className="flex justify-between items-center bg-slate-950 p-2.5 rounded-lg border border-slate-850">
-              <div className="flex items-center space-x-1.5 text-slate-400">
-                <FiZap className="w-4 h-4 text-amber-500 animate-pulse" />
-                <span>Current Streak</span>
-              </div>
-              <span className="text-slate-200 font-black">{streak} Days</span>
-            </div>
-
-            <div className="flex justify-between items-center bg-slate-950 p-2.5 rounded-lg border border-slate-850">
-              <div className="flex items-center space-x-1.5 text-slate-400">
-                <FiAward className="w-4 h-4 text-sky-400" />
-                <span>Total XP Earned</span>
-              </div>
-              <span className="text-sky-450 text-sky-400 font-black">{totalXp} XP</span>
-            </div>
-
-            <div className="flex justify-between items-center bg-slate-950 p-2.5 rounded-lg border border-slate-850">
-              <div className="flex items-center space-x-1.5 text-slate-400">
-                <FiClock className="w-4 h-4 text-purple-400" />
-                <span>Study Hours</span>
-              </div>
-              <span className="text-slate-200 font-black">{studyHours} hrs</span>
-            </div>
-          </div>
-
-          <div className="bg-slate-955 bg-slate-950 p-3 rounded-lg border border-slate-850 text-[10px] space-y-2 text-left">
-            <span className="text-slate-500 block uppercase font-bold tracking-wider">Placement Tip</span>
-            <p className="text-slate-400 leading-relaxed font-semibold">
-              Review DBMS ACID properties and OOPs polymorphism implementation details before coding rounds.
-            </p>
-          </div>
-        </aside>
 
       </div>
     </div>

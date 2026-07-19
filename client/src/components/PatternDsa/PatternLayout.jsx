@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FiCode, FiLayers, FiCompass, FiBriefcase, FiZap, FiAward, FiClock, FiGrid, FiArrowRight, FiLock, FiCheck, FiCircle } from 'react-icons/fi';
-import { getLocalItem } from '../../utils/localStorageHelper.js';
+import { FiLock } from 'react-icons/fi';
 import { categoriesList } from './patternData.js';
 import { 
   getPatternProgress, 
@@ -19,19 +18,6 @@ const PatternLayout = ({ children }) => {
     return null;
   });
 
-  const streak = 8;
-  const [totalXp, setTotalXp] = useState(() => {
-    return getLocalItem('user_xp', '240');
-  });
-  const studyHours = '12.5';
-
-  React.useEffect(() => {
-    const handleXpChanged = () => {
-      setTotalXp(getLocalItem('user_xp', '240'));
-    };
-    window.addEventListener('xp-changed', handleXpChanged);
-    return () => window.removeEventListener('xp-changed', handleXpChanged);
-  }, []);
 
   const patternsSublist = [
     { id: 'two-pointer', name: 'Two Pointer' },
@@ -142,54 +128,6 @@ const PatternLayout = ({ children }) => {
         <div className="flex-grow min-w-0">
           {children}
         </div>
-
-        {/* 3. Right Sticky Sidebar (Progress, Study Time, XP, Next Pattern, Interview Tip) */}
-        <aside className="hidden md:block w-64 bg-slate-900 border border-slate-800 p-4 rounded-xl sticky top-24 shrink-0 space-y-4">
-          <div className="border-b border-slate-800/60 pb-2">
-            <span className="text-[9px] font-black text-purple-400 uppercase tracking-widest block">Summary</span>
-            <h3 className="text-xs font-bold text-slate-205 text-slate-200">Current Progress</h3>
-          </div>
-
-          <div className="space-y-2.5 text-xs">
-            
-            {/* Progress */}
-            <div className="bg-slate-950 p-3 rounded-lg border border-slate-850 flex items-center justify-between">
-              <span className="text-slate-400 font-semibold">Streak</span>
-              <span className="text-slate-200 font-bold">🔥 {streak} Days</span>
-            </div>
-
-            {/* Study Time */}
-            <div className="bg-slate-950 p-3 rounded-lg border border-slate-850 flex items-center justify-between">
-              <span className="text-slate-400 font-semibold">Study Time</span>
-              <span className="text-slate-200 font-bold">{studyHours} Hrs</span>
-            </div>
-
-            {/* XP */}
-            <div className="bg-slate-950 p-3 rounded-lg border border-slate-850 flex items-center justify-between">
-              <span className="text-slate-400 font-semibold">Earned XP</span>
-              <span className="text-emerald-400 font-black">+{totalXp} XP</span>
-            </div>
-
-          </div>
-
-          {/* Next Recommended Pattern */}
-          <div className="p-3.5 bg-slate-950 border border-slate-850 rounded-lg space-y-1.5 text-left">
-            <span className="text-[8px] text-sky-400 font-extrabold uppercase tracking-wide block">Next Pattern</span>
-            <h4 className="text-xs font-bold text-slate-200">Sliding Window</h4>
-            <p className="text-[10px] text-slate-500 leading-relaxed font-semibold">
-              Unlocks after completing arrays Two Pointer.
-            </p>
-          </div>
-
-          {/* Interview Tip */}
-          <div className="p-3.5 bg-slate-950/60 border border-slate-850 rounded-lg space-y-1.5 text-left">
-            <span className="text-[8px] text-slate-500 font-bold uppercase tracking-wider block">Interview Tip</span>
-            <p className="text-[10px] text-slate-300 font-semibold leading-relaxed">
-              "Trace indices dry-run variables on sample inputs to avoid infinite loop checks."
-            </p>
-          </div>
-
-        </aside>
 
       </div>
     </div>

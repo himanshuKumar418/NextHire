@@ -9,7 +9,6 @@ import {
   FiBookOpen, 
   FiHelpCircle, 
   FiCompass, 
-  FiInfo,
   FiZap,
   FiAward,
   FiLock,
